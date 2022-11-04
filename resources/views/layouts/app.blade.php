@@ -29,6 +29,11 @@
             <!-- Page Content -->
             <main>
                 {{ $slot }}
+
+                <span class="text-gray-400 text-xs text-center uppercase pb-6 -mt-7 block">
+                    {{ __('Powered by Laravel | Built with love by') }}
+                    <a class="font-bold text-gray-600 hover:text-gray-800" href="https://yiedpozi.my/" target="_blank">Yied Pozi</a>
+                </span>
             </main>
         </div>
     </body>

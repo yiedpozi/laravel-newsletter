@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Newsletter;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -20,6 +21,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'role',
         'password',
     ];
 
@@ -41,4 +43,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the newsletters for the user.
+     */
+    public function newsletters()
+    {
+        return $this->hasMany(Newsletter::class);
+    }
 }
