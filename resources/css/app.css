@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swal2-styled.swal2-confirm.swal2-confirm-delete {
+	background-color: #ef4444;
+}
+.swal2-styled.swal2-confirm.swal2-confirm-delete:focus {
+	box-shadow: 0 0 0 3px rgba(239, 68, 68, .5);
+}
