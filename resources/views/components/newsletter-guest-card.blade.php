@@ -2,7 +2,7 @@
     $newsletter = \App\Models\Newsletter::withTrashed()->find($id);
 @endphp
 
-<div class="lg:flex lg:items-center lg:justify-between">
+<div id="newsletter-{{ $newsletter->id }}" class="border-b border-slate-100 pb-5 mb-5 lg:flex lg:items-center lg:justify-between">
     <div class="min-w-0 flex-1">
         <h2 class="text-xl font-bold leading-7 text-gray-900 sm:truncate sm:text-2xl sm:tracking-tight">{{ $newsletter->title }}</h2>
 

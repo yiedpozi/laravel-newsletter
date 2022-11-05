@@ -53,7 +53,7 @@ class NewsletterController extends Controller
             'content' => $request->content,
         ]);
 
-        return redirect()->route('user.newsletters.index')->withSuccess(__('Successfully create newsletter :title.', ['title' => $newsletter->title]));
+        return redirect()->route('user.newsletters.index')->withSuccess(__('Successfully create newsletter <strong>:title</strong>.', ['title' => $newsletter->title]));
     }
 
     /**

@@ -21,7 +21,6 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     @foreach ($newsletters as $newsletter)
                         <x-newsletter-card id="{{ $newsletter->id }}" />
-                        <hr class="border-slate-100 my-5">
                     @endforeach
                 </div>
             </div>

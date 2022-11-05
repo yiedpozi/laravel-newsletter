@@ -14,4 +14,13 @@ Route::middleware(['auth', 'verified'])->name('user.')->group(function () {
     Route::post('/newsletters/{newsletter}/restore', [NewsletterController::class, 'restore'])
         ->name('newsletters.restore')
         ->withTrashed();
+
+
 });
+
+    Route::get('/test', function () {
+        // \App\Models\Newsletter::inRandomOrder()->first()->delete();
+        \App\Models\Newsletter::withTrashed()->inRandomOrder()->first()->restore();
+        // event(new App\Events\NewsletterDeleted(\App\Models\Newsletter::inRandomOrder()->first()));
+        // event(new App\Events\NewsletterRestored(\App\Models\Newsletter::inRandomOrder()->first()));
+    });
